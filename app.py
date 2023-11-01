@@ -4,7 +4,7 @@ import os
 
 
 
-st.set_page_config(layout='wide', page_title='VideoResizer')
+st.set_page_config(page_title='VideoResizer')
 
 
 # Streamlit UI
