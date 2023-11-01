@@ -21,7 +21,7 @@ if uploaded_file is not None:
     
 
     # Check the file extension
-    if video_filename.endswith(".mp4") or video_filename.endswith(".mov")
+    if video_filename.endswith(".mp4") or video_filename.endswith(".mov"):
         # Display the uploaded video
         st.video(uploaded_file)
 
