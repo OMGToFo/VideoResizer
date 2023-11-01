@@ -32,9 +32,9 @@ if uploaded_file is not None:
 
         # User input for output path
         #output_path = st.text_input("Enter output filename for the resized video", value="resized_video.mp4")
-        if video_filename.endswith(".mp4") 
+        if video_filename.endswith(".mp4"): 
             output_path = "resized_video.mp4"
-        if video_filename.endswith(".mov") 
+        if video_filename.endswith(".mov"): 
             output_path = "resized_video.mov"
 
         
