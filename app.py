@@ -11,7 +11,7 @@ st.set_page_config(page_title='VideoResizer')
 st.title("MP4 Video Resizer")
 
 # Upload video
-uploaded_file = st.file_uploader("Upload a video (MP4 format)", type=["mp4"])
+uploaded_file = st.file_uploader("Upload a video (MP4 format)", type=["mp4", "mov"])
 
 if uploaded_file is not None:
     st.write("Uploaded video:")
@@ -21,7 +21,7 @@ if uploaded_file is not None:
     
 
     # Check the file extension
-    if video_filename.endswith(".mp4"):
+    if video_filename.endswith(".mp4") or video_filename.endswith(".mov")
         # Display the uploaded video
         st.video(uploaded_file)
 
