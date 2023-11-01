@@ -81,7 +81,7 @@ if uploaded_file is not None:
                     if video_filename.endswith(".mp4"):
                         st.download_button("Download Video", data=f, file_name="resized_video_width"+str(new_width)+".mp4")
                     if video_filename.endswith(".mov"):
-                        st.download_button("Download Video", data=f, file_name="resized_video_width"+str(new_width)+".mp4")
+                        st.download_button("Download Video", data=f, file_name="resized_video_width"+str(new_width)+".mov")
                         
 
 
