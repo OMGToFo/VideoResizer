@@ -2,6 +2,11 @@ import streamlit as st
 import moviepy.editor as mp
 import os
 
+
+
+st.set_page_config(layout='wide', page_title='VideoResizer')
+
+
 # Streamlit UI
 st.title("MP4 Video Resizer")
 
