@@ -32,8 +32,12 @@ if uploaded_file is not None:
 
         # User input for output path
         #output_path = st.text_input("Enter output filename for the resized video", value="resized_video.mp4")
-        output_path = "resized_video.mp4"
+        if video_filename.endswith(".mp4") 
+            output_path = "resized_video.mp4"
+        if video_filename.endswith(".mov") 
+            output_path = "resized_video.mov"
 
+        
         if st.button("Resize"):
             if new_width <= 0:
                 st.error("Please enter a valid width.")
@@ -74,8 +78,14 @@ if uploaded_file is not None:
                 #st.download_button(label="Download Resized Video", data=output_path, file_name="Resizedvideo.mp4", key="download_button")
 
                 with open(output_path, "rb") as f:
-                    st.download_button("Download Video", data=f, file_name="resized_video_width"+str(new_width)+".mp4")
+                     if video_filename.endswith(".mp4"):
+                         st.download_button("Download Video", data=f, file_name="resized_video_width"+str(new_width)+".mp4")
+                    if video_filename.endswith(".mov"):
+                        st.download_button("Download Video", data=f, file_name="resized_video_width"+str(new_width)+".mp4")
+                        
 
+
+                
                 # Clean up the resources
                 resized_video.close()
                 video.close()
@@ -83,4 +93,4 @@ if uploaded_file is not None:
                 # Remove temporary uploaded video
                 os.remove(video_filename)
     else:
-        st.error("Please upload a video in MP4 format.")
+        st.error("Please upload a video in valid format.")
