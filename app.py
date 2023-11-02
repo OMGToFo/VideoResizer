@@ -11,7 +11,7 @@ st.set_page_config(page_title='VideoResizer')
 st.title("MP4 Video Resizer")
 
 # Upload video
-uploaded_file = st.file_uploader("Upload a video (MP4 format)", type=["mp4", "mov"])
+uploaded_file = st.file_uploader("Upload a video (MP4 or MOV format)", type=["mp4", "mov"])
 
 if uploaded_file is not None:
     st.write("Uploaded video:")
@@ -32,10 +32,10 @@ if uploaded_file is not None:
 
         # User input for output path
         #output_path = st.text_input("Enter output filename for the resized video", value="resized_video.mp4")
-        if video_filename.endswith(".mp4"): 
-            output_path = "resized_video.mp4"
-        if video_filename.endswith(".mov"): 
-            output_path = "resized_video.mov"
+        #if video_filename.endswith(".mp4"): 
+        output_path = "resized_video.mp4"
+        #if video_filename.endswith(".mov"): 
+          #  output_path = "resized_video.mov"
 
         
         if st.button("Resize"):
