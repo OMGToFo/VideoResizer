@@ -8,7 +8,7 @@ st.set_page_config(page_title='VideoResizer')
 
 
 # Streamlit UI
-st.title("MP4 Video Resizer")
+st.title("Supersimple MP4 Video Resizer")
 
 # Upload video
 uploaded_file = st.file_uploader("Upload a video (MP4 or MOV format)", type=["mp4", "mov"])
